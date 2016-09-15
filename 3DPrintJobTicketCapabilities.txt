@@ -1,0 +1,55 @@
+PrintJobTicketCapabilities : PrintJobTicketCapabilitiesType
+	--> PrintDocumentProcessingCapabilities
+	--> PrintJobDescriptionCapabilities ***
+	--> PrintJobProcessingCapabilities
+
+
+PrintJobDescriptionCapabilities : PrintJobDescriptionCapabilitiesType : ImagingJobDescriptionCapabilitiesType
+	--> ElementsNaturalLanguage *
+	--> JobAccountingID
+	--> JobAccountingUserID : boolean
+	--> JobMandatoryElements : boolean
+	--> JobMessageFromOperator : boolean
+	--> JobMessageToOperator : boolean
+	--> JobMoreInfo : boolean
+	--> JobName: boolean (3D IPP Job Description Attributes Table 8)
+	--> JobOriginatingUserName : boolean (3D IPP Job Status Attributes Table 9)
+	--> JobOriginatingUserUri : boolean
+	--> JobPages : boolean ------XXXXXXXXXXX-------
+	--> JobPassword: int
+	--> JobPasswordEncryption : *
+	--> KOctets : boolean
+	--> --> TemplateCreatorUserName: boolean
+	--> --> TemplateId : boolean
+	--> --> TemplateInfo: boolean
+	--> --> TemplateName : boolean
+	--> --> TemplateType : *
+	--> CompressionSupplied : CompressionSupportedType * (3D IPP Job Status Attributes Table 9)
+	--> DocumentCharsetSupplied : DocumentCharsetSupportedType *
+	--> DocumentDigitalSignatureSupplied : boolean	
+	--> DocumentFormatDetailsSupplied *
+	--> DocumentFormatSupplied : DocumentFormatSupplied??Supported??Type * (3D IPP Job Status Attributes Table 9)
+	--> DocumentFormatVersionSupplied : DocumentFormatVersionSuppliedType *
+	--> DocumentMessageSupplied : boolean
+	--> DocumentNameSupplied : boolean (3D IPP Job Status Attributes Table 9)
+	--> JobCollationType * ---- Deprecated in IPP ------------
+	--> Impressions : boolean ------XXXXXXXXXXX-------
+	--> MediaSheets : boolean ------XXXXXXXXXXX-------
+	--> PageOrderReceived * ------XXXXXXXXXXX-------
+	--> Any
+
+	--> JobID (RFC 2911)
+	--> JobPrinterUptime (RFC 2911)
+	--> JobPrinterUri (RFC 2911)
+	--> JobState (RFC 2911)
+	--> JobStateReasons (RFC 2911)
+	--> JobUri (RFC 2911)
+	--> JobUuid --------------YYYYYYYYYYYYYYYYY 5100.13 -----------------
+	--> TimeAtCompleted (RFC 2911)
+	--> TimeAtCreation (RFC 2911)
+	--> TimeAtProcessing (RFC 2911)
+	--> MaterialsColActual (???) --------------YYYYYYYYYYYY------ This may go into the Job Receipt also
+	--> PrintObjectsActual (???) --------------YYYYYYYYYYY-------- This may go into the Job Receipt also
+
+	
+
