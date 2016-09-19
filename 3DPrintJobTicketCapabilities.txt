@@ -15,7 +15,7 @@ PrintJobDescriptionCapabilities : PrintJobDescriptionCapabilitiesType : ImagingJ
 	--> JobName: boolean (3D IPP Job Description Attributes Table 8)
 	--> JobOriginatingUserName : boolean (3D IPP Job Status Attributes Table 9)
 	--> JobOriginatingUserUri : boolean
-	--> JobPages : boolean ------XXXXXXXXXXX-------
+	--> JobPages : boolean /* to be deleted in Print 3D */
 	--> JobPassword: int
 	--> JobPasswordEncryption : *
 	--> KOctets : boolean
@@ -33,9 +33,9 @@ PrintJobDescriptionCapabilities : PrintJobDescriptionCapabilitiesType : ImagingJ
 	--> DocumentMessageSupplied : boolean
 	--> DocumentNameSupplied : boolean (3D IPP Job Status Attributes Table 9)
 	--> JobCollationType * ---- Deprecated in IPP ------------
-	--> Impressions : boolean ------XXXXXXXXXXX-------
-	--> MediaSheets : boolean ------XXXXXXXXXXX-------
-	--> PageOrderReceived * ------XXXXXXXXXXX-------
+	--> Impressions : boolean /* to be deleted in Print 3D */
+	--> MediaSheets : boolean /* to be deleted in Print 3D */
+	--> PageOrderReceived * /* to be deleted in Print 3D */
 	--> Any
 
 	--> JobID (RFC 2911)
@@ -48,8 +48,17 @@ PrintJobDescriptionCapabilities : PrintJobDescriptionCapabilitiesType : ImagingJ
 	--> TimeAtCompleted (RFC 2911)
 	--> TimeAtCreation (RFC 2911)
 	--> TimeAtProcessing (RFC 2911)
-	--> MaterialsColActual (???) --------------YYYYYYYYYYYY------ This may go into the Job Receipt also
-	--> PrintObjectsActual (???) --------------YYYYYYYYYYY-------- This may go into the Job Receipt also
+	--> MaterialsColActual  /* New in Print 3D This may go into the Job Receipt also */
+	--> PrintObjectsActual /* New in Print 3D This may go into the Job Receipt also */
+
+
+
+
+CompressionSupplied : CompressionSupportedType 
+
+keyword values: none, deflate, gzip, compress; /* 3MF and PDF do not need compression. Use 'none' */
+
+
 
 	
 
