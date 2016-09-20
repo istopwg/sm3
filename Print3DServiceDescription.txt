@@ -1,0 +1,112 @@
+		accuracy-units-supported Section	/* 3D 8.3.1 */
+		CharsetConfigured		charset-configured 					/* RFC	2911*/
+		CharsetSupported		charset-supported 					/* RFC	2911 */
+		DeviceId
+		ColorSupported
+		CompressionDefault
+		CompressionSupported 	compression-supported 				/* RFC	2911 */
+		DocumentFormatDefault	document-format-default 			/* RFC	2911 */
+		DocumentFormatSupported document-format-supported 			/* RFC	2911 */
+		DocumentFormatDetailsDefault
+		DocumentFormatDetailsSupported
+		DocumentFormatVersionsSupported
+		DocumentFormatVersionDefault
+		DocumentPasswordSupported
+		GetEventLife
+		NaturalLanguageSupported	generated-natural-language-supported /* RFC	2911 */ <-----
+		IdentifyActionsDefault	identify-actions-default 			/* PWG	5100.13 */
+		IdentifyActionsSupported	identify-actions-supported 		/* PWG	5100.13 */
+		FeaturesSupported		ipp-features-supported 				/* PWG	5100.13 */
+		ImpressionsSupported 										/* Delete in Print3D */ <----
+		ipp-versions-supported RFC	2911
+		JobConstraintsSupported		job-constraints-supported 		/* PWG	5100.13 */
+		JobCreationElementsSupported job-creation-attributes-supported /* PWG	5100.11 */ <-------
+		JobPasswordEncryptionSupported
+		JobPasswordSupported
+		PreferredElementsSupported
+		JobResolversSupported
+		JobSettableElementsSupported
+		JobSpoolingSupported
+		KOctetsSupported
+		MaxSaveInfoSupported
+		MaxStitchingLocationsSupported
+		MediaBottomMarginSupported									/* Delete in Print3D */ <----
+		MediaLeftMarginSupported									/* Delete in Print3D */ <----
+		MediaSheetsSupported										/* Delete in Print3D */ <----
+		MediaSourceSupported										/* Delete in Print3D */ <----
+		MediaTopMarginSupported										/* Delete in Print3D */ <----
+		PagesPerMinute 												/* Delete in Print3D */ <----
+		PagesPerMinuteColor											/* Delete in Print3D */ <----
+		ParentPrintersSupported
+		PdlOverrideSupported
+		PrinterDetailedStatusMessages
+		PrinterSettableElementsSupported
+		PwgRasterDocumentSheetBack
+		PwgRasterDocumentResolutionsSupported
+		PwgRasterDocumentTypeSupported
+		ReferenceUriSchemesSupported
+		RepertoiresSupported
+		ServiceConfigChangeDateTime
+		ServiceConfigChangeTime
+		ServiceIccProfiles
+		ServiceIcons
+		ServiceMandatoryJobElements
+		SubordinatePrintersSupported
+		UserDefinedValuesSupported
+
+		job-ids-supported PWG	5100.11
+		job-resolvers-supported PWG	5100.13
+		material-diameter-supported	(note	2) Section	8.3.3
+		material-purpose-supported Section	8.3.4
+		material-rate-supported Section	8.3.5
+		material-rate-units-supported Section	8.3.6
+		material-shell-thickness-supported Section	8.3.7
+		material-temperature-supported	(note	3) Section 8.3.7
+		material-type-supported Section	8.3.9
+		materials-col-default Section	8.3.11
+		materials-col-ready Section	8.3.12
+		materials-col-supported Section	8.3.13
+		MessageFromOperator
+		MultipleDocumentJobsSupported	multiple-document-jobs-supported /* RFC	2911 */ <---
+		multiple-object-handling-default Section	8.3.14
+		multiple-object-handling-supported Section	8.3.15
+		MultipleOperationTimeOut 		multiple-operation-timeout 		/* RFC	2911 */
+		multiple-operation-timeout-action PWG	5100.13
+		NaturalLanguageConfigured	natural-language-configured 	/* RFC	2911 */
+		OperationsSupported		operations-supported 				/* RFC	2911 */
+		OwnerUri
+		OwnerVCard
+		print-accuracy-default Section	8.3.17
+		print-accuracy-supported Section	8.3.18
+		ServiceChargeInfo
+		ServiceChargeInfoUri
+		print-objects-supported Section	8.3.19
+		print-quality-default RFC	2911
+		print-quality-supported RFC	2911
+		print-rafts-default Section	8.3.20
+		print-rafts-supported Section	8.3.21
+		print-supports-default Section	8.3.22
+		print-supports-supported Section	8.3.23
+		printer-bed-temperature-default	(note	4) Section	8.3.24
+		printer-bed-temperature-supported	(note	4) Section	8.3.25
+		ServiceGeoLocation		printer-geo-location 			/* PWG	5100.13 */ <----------
+		printer-get-attributes-supported PWG	5100.13
+		printer-icons	(note	1) PWG	5100.13
+		ServiceInfo				printer-info 					/* RFC	2911 */ <-------------
+		ServiceStringsLanguageSupported
+		ServiceStringsUri
+		ServiceLocation 		printer-location 				/* RFC 2911 */ <----------
+		MakeAndModel			printer-make-and-model 			/* RFC	2911 */
+		MoreInfoUri				printer-more-info 				/* RFC	2911 */
+		MoreInfoManufacturerUri
+		ServiceName				printer-name 					/* RFC	2911 */ <--------
+		ServiceOrganizations	printer-organization 			/* PWG	5100.13 */ <-----
+		printer-organizational-unit PWG	5100.13
+		printer-volume-supported Section	8.3.27
+		ServiceXriSupported		printer-xri-supported (note	1) 	/* RFC	3380 */
+		queued-job-count RFC	2911
+		VersionsSupported
+		which-jobs-supported PWG	5100.11
+		xri-authentication-supported RFC	3380
+		xri-security-supported RFC	3380
+		xri-uri-scheme-supported RFC	3380
