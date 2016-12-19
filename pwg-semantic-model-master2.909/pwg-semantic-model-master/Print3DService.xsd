@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.pwg.org/schemas/2016/12/sm" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pwg="http://www.pwg.org/schemas/2016/12/sm" targetNamespace="http://www.pwg.org/schemas/2016/12/sm" elementFormDefault="qualified" attributeFormDefault="qualified" version="2.909">
+	<xs:include schemaLocation="Print3DServiceDefaults.xsd"/>
+	<xs:include schemaLocation="Print3DJobTicket.xsd"/>
+	<xs:include schemaLocation="Print3DServiceCapabilities.xsd"/>
+	<!--12/07/16 PJZ Split out from PrintService-->
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+   PWG Semantic Model v2   
+
+Copyright 2002-20011, IEEE Industry Standards and Technology Organization/PWG - MFD Working Group. 
+All rights reserved  
+
+   Editors:  Peter Zehler, Ira McDonald 
+</xs:documentation>
+	</xs:annotation>
+	<!---->
+	<!---->
+	<!-- Print3DDocument - group -->
+	<!---->
+	<!-- Prin3DDocumentStatus - group -->
+	<xs:complexType name="Print3DDocumentStatusType">
+		<xs:sequence>
+			<!-- Print Document status references here -->
+			<!-- Print Document counters from service counters definition -->
+			<xs:element ref="DateTimeAtCompleted" minOccurs="0"/>
+			<xs:element ref="DateTimeAtCreation" minOccurs="0"/>
+			<xs:element ref="DateTimeAtProcessing" minOccurs="0"/>
+			<xs:element ref="DetailedStatusMessages" minOccurs="0"/>
+			<xs:element ref="DocumentAccessErrors" minOccurs="0"/>
+			<xs:element ref="DocumentFormatDetailsDetected" minOccurs="0"/>
+			<xs:element ref="DocumentFormatDetected" minOccurs="0"/>
+			<xs:element ref="DocumentFormatVersionDetected" minOccurs="0"/>
+			<xs:sequence>
+				<xs:element ref="DocumentNumber"/>
+				<xs:element ref="DocumentUuid"/>
+			</xs:sequence>
+			<xs:element name="DocumentState"/>
+			<xs:element ref="DocumentStateMessage" minOccurs="0"/>
+			<xs:element ref="DocumentStateReasons"/>
+			<xs:element ref="DocumentUri" minOccurs="0"/>
+			<xs:element ref="ErrorsCount" minOccurs="0"/>
+			<xs:sequence>
+				<xs:element ref="JobId" minOccurs="0"/>
+				<xs:element ref="JobUuid" minOccurs="0"/>
+			</xs:sequence>
+			<xs:element ref="JobUri" minOccurs="0"/>
+			<xs:element ref="KOctetsProcessed" minOccurs="0"/>
+			<xs:element ref="MoreInfo" minOccurs="0"/>
+			<xs:element ref="OutputDeviceAssigned" minOccurs="0"/>
+			<xs:element ref="ServiceUri" minOccurs="0"/>
+			<xs:element ref="TimeAtCompleted" minOccurs="0"/>
+			<xs:element ref="TimeAtCreation" minOccurs="0"/>
+			<xs:element ref="TimeAtProcessing" minOccurs="0"/>
+			<xs:element ref="UpTime" minOccurs="0"/>
+			<xs:element ref="WarningsCount" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintDocumentStatus - group -->
+	</xs:complexType>
+	<xs:element name="Print3DDocumentStatus" type="Print3DDocumentStatusType"/>
+	<!-- Print3DDocuments - set of Print Documents -->
+	<xs:complexType name="Print3DDocumentsType">
+		<xs:sequence>
+			<xs:element ref="Print3DDocument" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintDocuments - set of Print Documents -->
+	</xs:complexType>
+	<xs:element name="Print3DDocuments" type="Print3DDocumentsType"/>
+	<!-- Print3DDocument - object -->
+	<xs:complexType name="Print3DDocumentType">
+		<xs:sequence>
+			<xs:element ref="Print3DDocumentReceipt" minOccurs="0"/>
+			<xs:element ref="Print3DDocumentStatus"/>
+			<xs:element ref="Print3DDocumentTicket" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintDocument - object -->
+	</xs:complexType>
+	<xs:element name="Print3DDocument" type="Print3DDocumentType"/>
+	<!---->
+	<!-- Print3DJob - group -->
+	<!---->
+	<!-- Print#dJobStatus - group -->
+	<xs:complexType name="Print3DJobStatusType">
+		<xs:sequence>
+			<!-- Print job status references here -->
+			<xs:element ref="CompressionDetected" minOccurs="0"/>
+			<xs:element ref="DateTimeAtCompleted"/>
+			<xs:element ref="DateTimeAtCreation"/>
+			<xs:element ref="DateTimeAtProcessing"/>
+			<xs:element ref="DetailedStatusMessages" minOccurs="0"/>
+			<xs:element ref="DocumentAccessErrors" minOccurs="0"/>
+			<xs:element ref="DocumentFormatDetailsDetected" minOccurs="0"/>
+			<xs:element ref="DocumentFormatDetected" minOccurs="0"/>
+			<xs:element ref="DocumentFormatVersionDetected" minOccurs="0"/>
+			<xs:element ref="ErrorsCount" minOccurs="0"/>
+			<xs:element ref="ImpressionsCompleted" minOccurs="1"/>
+			<xs:element ref="ImpressionsCompletedCurrentCopy" minOccurs="0"/>
+			<xs:sequence>
+				<xs:element ref="JobId"/>
+				<xs:element ref="JobUuid"/>
+			</xs:sequence>
+			<xs:element ref="JobOriginatingUserAuthenticationInfo"/>
+			<xs:element ref="JobOriginatingUserName"/>
+			<xs:element ref="JobOriginatingUserUri" minOccurs="0"/>
+			<xs:element ref="JobState"/>
+			<xs:element ref="JobStateMessage" minOccurs="0"/>
+			<xs:element ref="JobStateReasons"/>
+			<xs:element ref="JobUri" minOccurs="0"/>
+			<xs:element ref="KOctetsProcessed" minOccurs="0"/>
+			<xs:element ref="MediaSheetsCompleted" minOccurs="0"/>
+			<xs:element ref="MoreInfo" minOccurs="0"/>
+			<xs:element ref="NumberOfDocuments" minOccurs="0"/>
+			<xs:element ref="NumberOfInterveningJobs" minOccurs="0"/>
+			<xs:element ref="OutputDeviceAssigned" minOccurs="0"/>
+			<xs:element ref="SheetsCompletedCopyNumber" minOccurs="0"/>
+			<xs:element ref="SheetsCompletedDocumentNumber" minOccurs="0"/>
+			<!-- Print job counters from service counters definition -->
+			<xs:element ref="ServiceUri" minOccurs="0"/>
+			<xs:element ref="TimeAtCompleted" minOccurs="0"/>
+			<xs:element ref="TimeAtCreation" minOccurs="0"/>
+			<xs:element ref="TimeAtProcessing" minOccurs="0"/>
+			<xs:element ref="UpTime" minOccurs="0"/>
+			<xs:element ref="WarningsCount" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintJobStatus - group -->
+	</xs:complexType>
+	<xs:element name="Print3DJobStatus" type="Print3DJobStatusType"/>
+	<!-- PrintJobs - set of Print jobs -->
+	<xs:complexType name="Print3DJobsType">
+		<xs:sequence>
+			<xs:element ref="Print3DJob" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintJobs - set of Print jobs -->
+	</xs:complexType>
+	<!-- PrintJob - object -->
+	<xs:complexType name="Print3DJobType">
+		<xs:sequence>
+			<xs:element ref="Print3DJobReceipt" minOccurs="0"/>
+			<xs:element ref="Print3DJobStatus"/>
+			<xs:element ref="Print3DJobTicket" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintJob - object -->
+	</xs:complexType>
+	<xs:element name="Print3DJob">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Print3DJobType">
+					<xs:sequence>
+						<xs:element ref="Print3DDocuments" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!---->
+	<!-- PrintService - group -->
+	<!---->
+	<!-- PrintServiceStatus - group -->
+	<xs:complexType name="Print3DServiceStatusType">
+		<xs:complexContent>
+			<xs:extension base="ImagingServiceStatusType">
+				<xs:sequence>
+					<!-- SM/1.0 Printer group import -->
+					<xs:element ref="PrinterConfigDateTime"/>
+					<xs:element ref="IsAcceptingJobs"/>
+					<xs:element ref="PrintServiceCounters" minOccurs="0"/>
+					<xs:element ref="QueuedJobCount"/>
+					<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Print3DServiceStatus" type="Print3DServiceStatusType"/>
+	<!-- Print3DServiceDescription - group -->
+	<xs:complexType name="Print3DServiceDescriptionType">
+		<xs:complexContent>
+			<xs:extension base="ImagingServiceDescriptionType">
+				<xs:sequence>
+					<xs:element ref="AccuracyUnitsSupported"/>
+					<xs:element ref="DocumentFormatDefault"/>
+					<xs:element ref="DocumentFormatSupported"/>
+					<xs:element ref="FeaturesSupported" minOccurs="0"/>
+					<xs:element ref="IdentifyActionsDefault" minOccurs="0"/>
+					<xs:element ref="IdentifyActionsSupported" minOccurs="0"/>
+					<xs:element ref="Job3DConstraintsSupported" minOccurs="0"/>
+					<xs:element ref="JobCreationElementsSupported" minOccurs="0"/>
+					<xs:element ref="JobIdsSupported"/>
+					<xs:element ref="Job3DResolversSupported"/>
+					<xs:element ref="MaterialAmountUnitsSupported" minOccurs="0"/>
+					<xs:element ref="MaterialsColDatabase"/>
+					<xs:element ref="MaterialsColDefault"/>
+					<xs:element ref="MaterialsColReady"/>
+					<xs:element ref="MaterialDiameterSupported" minOccurs="0"/>
+					<xs:element ref="MaterialPurposeSupported"/>
+					<xs:element ref="MaterialRateSupported" minOccurs="0"/>
+					<xs:element ref="MaterialRateUnitsSupported" minOccurs="0"/>
+					<xs:element ref="MaterialShellThicknessSupported"/>
+					<xs:element ref="MaterialTemperatureSupported" minOccurs="0"/>
+					<xs:element ref="MaterialTypeSupported"/>
+					<xs:element ref="MaterialsColDatabase" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="MaterialsColDefault" maxOccurs="unbounded"/>
+					<xs:element ref="MaterialsColReady" maxOccurs="unbounded"/>
+					<xs:element ref="MaterialsColSupported" maxOccurs="unbounded"/>
+					<xs:element ref="MultipleDocumentJobsSupported" minOccurs="0"/>
+					<xs:element ref="MultipleObjectHandlingDefault" minOccurs="0"/>
+					<xs:element ref="MultipleObjectHandlingSupported" minOccurs="0"/>
+					<xs:element ref="MultipleOperationTimeoutAction"/>
+					<xs:element ref="MultipleObjectHandlingSupported" minOccurs="0"/>
+					<xs:element ref="PdfFeaturesSupported" minOccurs="0"/>
+					<xs:element ref="PrintAccuracyDefault"/>
+					<xs:element ref="PrintAccuracySupported"/>
+					<xs:element ref="PrinterBedTemperatureDefault" minOccurs="0"/>
+					<xs:element ref="PrinterBedTemperatureSupported" minOccurs="0"/>
+					<xs:element ref="PrinterCameraImageUri" minOccurs="0"/>
+					<xs:element ref="PrintObjectsSupported"/>
+					<xs:element ref="PrintRaftsDefault"/>
+					<xs:element ref="PrintRaftsSupported"/>
+					<xs:element ref="PrintSupportsDefaults"/>
+					<xs:element ref="PrintSupportsSupported"/>
+					<xs:element ref="PrintVolumeSupported"/>
+					<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+		<!--Print3DServiceDescription - group -->
+	</xs:complexType>
+	<xs:element name="Print3DServiceDescription" type="Print3DServiceDescriptionType"/>
+	<!-- Print3DServices - set of Print services -->
+	<xs:complexType name="Print3DServicesType">
+		<xs:sequence>
+			<xs:element ref="Print3DService" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintServices - set of Print services -->
+	</xs:complexType>
+	<xs:element name="Print3DServices" type="Print3DServicesType"/>
+	<!-- Print3DService - object -->
+	<xs:complexType name="Job3DConstraintsSupportedType">
+		<xs:sequence>
+			<xs:element name="JobConstraint">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ResolverName"/>
+						<xs:element name="JobTicketElements" type="Print3DServiceCapabilitiesType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Job3DConstraintsSupported" type="Job3DConstraintsSupportedType"/>
+	<xs:element name="Job3DResolversSupported">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="JobResolver" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ResolverName"/>
+							<xs:element name="JobTicketElements" type="Print3DServiceCapabilitiesType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Print3DServiceBaseType">
+		<xs:sequence>
+			<xs:element ref="Print3DServiceCapabilities" minOccurs="0"/>
+			<xs:element ref="Print3DServiceCapabilitiesReady" minOccurs="0"/>
+			<xs:element name="Print3DServiceConfiguration" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Consoles" minOccurs="0"/>
+						<xs:element ref="Covers" minOccurs="0"/>
+						<xs:element ref="Finishers" minOccurs="0"/>
+						<xs:element ref="InputChannels" minOccurs="0"/>
+						<xs:element ref="InputTrays" minOccurs="0"/>
+						<xs:element ref="Interfaces" minOccurs="0"/>
+						<xs:element ref="Interpreters" minOccurs="0"/>
+						<xs:element ref="Markers" minOccurs="0"/>
+						<xs:element ref="MediaPaths" minOccurs="0"/>
+						<xs:element ref="OutputTrays" minOccurs="0"/>
+						<xs:element ref="Processors" minOccurs="0"/>
+						<xs:element ref="Storages" minOccurs="0"/>
+						<xs:element ref="VendorSubunits" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="Print3DServiceDefaults" minOccurs="0"/>
+			<xs:element ref="Print3DServiceDescription"/>
+			<xs:element ref="Print3DServiceStatus"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintService - object -->
+	</xs:complexType>
+	<xs:complexType name="Print3DServiceType">
+		<xs:complexContent>
+			<xs:extension base="Print3DServiceBaseType">
+				<xs:sequence>
+					<xs:element name="JobTable">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ActiveJobs" type="Print3DJobsType"/>
+								<xs:element name="JobHistory" type="Print3DJobsType" minOccurs="0"/>
+								<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Print3DService" type="Print3DServiceType">
+		<xs:annotation>
+			<xs:documentation>3D PrintService</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

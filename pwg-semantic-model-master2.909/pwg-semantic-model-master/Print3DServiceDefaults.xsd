@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.pwg.org/schemas/2016/12/sm" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pwg="http://www.pwg.org/schemas/2016/12/sm" targetNamespace="http://www.pwg.org/schemas/2016/12/sm" elementFormDefault="qualified" attributeFormDefault="qualified" version="2.909">
+	<xs:include schemaLocation="Print3DJobTicket.xsd"/>
+	<!--12/07/116 PJZ Split out from PrintServiceCapabilities.xsd-->
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+   PWG Semantic Model v2   
+
+Copyright 2002-20011, IEEE Industry Standards and Technology Organization/PWG - MFD Working Group. 
+All rights reserved  
+
+   Editors:  Peter Zehler, Ira McDonald 
+</xs:documentation>
+	</xs:annotation>
+	<!---->
+	<!---->
+	<!---->
+	<!-- Print3DService Default Ticket - group -->
+	<!---->
+	<xs:element name="Print3DServiceDefaults">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DefaultPrint3DDocumentTicket" minOccurs="0"/>
+				<xs:element ref="DefaultPrint3DJobTicket" minOccurs="0"/>
+				<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DefaultPrint3DDocumentTicket" type="Print3DDocumentTicketType"/>
+	<xs:element name="DefaultPrint3DJobTicket" type="Print3DJobTicketType"/>
+</xs:schema>

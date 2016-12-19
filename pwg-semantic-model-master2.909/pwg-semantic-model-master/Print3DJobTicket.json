@@ -1,0 +1,421 @@
+{
+	"Print3DJobTicket": {
+		"Print3DDocumentProcessing": {
+			"Copies": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "0"
+			},
+			"OutputDevice": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "device1"
+			},
+			"PrintAccuracy": {
+				"AccuracyUnits": {
+					"__prefix": "pwg",
+					"__text": "um"
+				},
+				"XAccuracy": {
+					"__prefix": "pwg",
+					"__text": "0"
+				},
+				"YAccuracy": {
+					"__prefix": "pwg",
+					"__text": "0"
+				},
+				"ZAccuracy": {
+					"__prefix": "pwg",
+					"__text": "0"
+				},
+				"__prefix": "pwg"
+			},
+			"PrintObjects": {
+				"PrintObject": [{
+						"DocumentNumber": {
+							"_pwg:Key": "true",
+							"__prefix": "pwg",
+							"__text": "0"
+						},
+						"ObjectOffset": {
+							"XAccuracy": {
+								"__prefix": "pwg",
+								"__text": "0"
+							},
+							"YAccuracy": {
+								"__prefix": "pwg",
+								"__text": "0"
+							},
+							"ZAccuracy": {
+								"__prefix": "pwg",
+								"__text": "0"
+							},
+							"__prefix": "pwg"
+						},
+						"ObjectSize": {
+							"XAccuracy": {
+								"__prefix": "pwg",
+								"__text": "1"
+							},
+							"YAccuracy": {
+								"__prefix": "pwg",
+								"__text": "1"
+							},
+							"ZAccuracy": {
+								"__prefix": "pwg",
+								"__text": "1"
+							},
+							"__prefix": "pwg"
+						},
+						"ObjectUuid": {
+							"_pwg:Key": "true",
+							"__prefix": "pwg",
+							"__text": "http://www.altova.com"
+						},
+						"__prefix": "pwg"
+					}, {
+						"DocumentNumber": {
+							"_pwg:Key": "true",
+							"__prefix": "pwg",
+							"__text": "0"
+						},
+						"ObjectOffset": {
+							"XAccuracy": {
+								"__prefix": "pwg",
+								"__text": "0"
+							},
+							"YAccuracy": {
+								"__prefix": "pwg",
+								"__text": "0"
+							},
+							"ZAccuracy": {
+								"__prefix": "pwg",
+								"__text": "0"
+							},
+							"__prefix": "pwg"
+						},
+						"ObjectSize": {
+							"XAccuracy": {
+								"__prefix": "pwg",
+								"__text": "1"
+							},
+							"YAccuracy": {
+								"__prefix": "pwg",
+								"__text": "1"
+							},
+							"ZAccuracy": {
+								"__prefix": "pwg",
+								"__text": "1"
+							},
+							"__prefix": "pwg"
+						},
+						"ObjectUuid": {
+							"_pwg:Key": "true",
+							"__prefix": "pwg",
+							"__text": "http://www.altova.com"
+						},
+						"__prefix": "pwg"
+					}
+				],
+				"__prefix": "pwg"
+			},
+			"PrintRafts": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "none"
+			},
+			"PrintSupports": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "none"
+			},
+			"PrintObject": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "PrintSupports"
+			},
+			"Quality": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "Fine"
+			},
+			"__prefix": "pwg"
+		},
+		"Print3DJobDescription": {
+			"ElementsNaturalLanguage": {
+				"__prefix": "pwg",
+				"__text": "fr"
+			},
+			"JobAccountingID": {
+				"__prefix": "pwg",
+				"__text": "account1"
+			},
+			"JobAccountingUserID": {
+				"__prefix": "pwg",
+				"__text": "userid1"
+			},
+			"JobMessageFromOperator": {
+				"__prefix": "pwg",
+				"__text": "msgFromOperator"
+			},
+			"JobMessageToOperator": {
+				"__prefix": "pwg",
+				"__text": "msgToOperator"
+			},
+			"JobMoreInfo": {
+				"__prefix": "pwg",
+				"__text": "http://www.altova.com"
+			},
+			"JobName": {
+				"__prefix": "pwg",
+				"__text": "jobname"
+			},
+			"JobOriginatingUserName": {
+				"__prefix": "pwg",
+				"__text": "username1"
+			},
+			"JobOriginatingUserUri": {
+				"__prefix": "pwg",
+				"__text": "http://www.altova.com"
+			},
+			"JobPages": {
+				"__prefix": "pwg",
+				"__text": "0"
+			},
+			"KOctets": {
+				"__prefix": "pwg",
+				"__text": "0"
+			},
+			"TemplateCreatorUserName": {
+				"__prefix": "pwg",
+				"__text": "String"
+			},
+			"TemplateId": {
+				"__prefix": "pwg",
+				"__text": "http://www.altova.com"
+			},
+			"TemplateInfo": {
+				"__prefix": "pwg",
+				"__text": "templateinfo"
+			},
+			"TemplateName": {
+				"__prefix": "pwg",
+				"__text": "String"
+			},
+			"TemplateType": {
+				"__prefix": "pwg",
+				"__text": "NetFaxInJob"
+			},
+			"CompressionSupplied": {
+				"__prefix": "pwg",
+				"__text": "MatsushitaWhitelineSkip"
+			},
+			"DocumentCharsetSupplied": {
+				"__prefix": "pwg",
+				"__text": "us-dk"
+			},
+			"DocumentDigitalSignatureSupplied": {
+				"__prefix": "pwg",
+				"__text": "Pgp"
+			},
+			"DocumentFormatDetailsSupplied": {
+				"DocumentFormat": {
+					"__prefix": "pwg",
+					"__text": "text/plain; charset=utf-8"
+				},
+				"DocumentFormatDeviceId": {
+					"__prefix": "pwg",
+					"__text": "device1"
+				},
+				"DocumentFormatVersion": {
+					"__prefix": "pwg",
+					"__text": "String"
+				},
+				"DocumentNaturalLanguage": {
+					"__prefix": "pwg",
+					"__text": "fr"
+				},
+				"DocumentSourceApplicationName": {
+					"__prefix": "pwg",
+					"__text": "String"
+				},
+				"DocumentSourceApplicationVersion": {
+					"__prefix": "pwg",
+					"__text": "String"
+				},
+				"DocumentSourceOsName": {
+					"__prefix": "pwg",
+					"__text": "x11r3"
+				},
+				"DocumentSourceOsVersion": {
+					"__prefix": "pwg",
+					"__text": "String"
+				},
+				"__prefix": "pwg"
+			},
+			"DocumentFormatSupplied": {
+				"__prefix": "pwg",
+				"__text": "image/tiff-fx"
+			},
+			"DocumentFormatVersionSupplied": {
+				"__prefix": "pwg",
+				"__text": "1.0"
+			},
+			"DocumentMessageSupplied": {
+				"__prefix": "pwg",
+				"__text": "docmessage"
+			},
+			"DocumentMetadata": {
+				"qualifieddc": {
+					"accessRights": [{
+							"_xml:lang": "en-us",
+							"__prefix": "dcterms",
+							"__text": "text"
+						}, {
+							"_xml:lang": "en-us",
+							"__prefix": "dcterms",
+							"__text": "text"
+						}
+					],
+					"__prefix": "pwg"
+				},
+				"__prefix": "pwg"
+			},
+			"DocumentNameSupplied": {
+				"__prefix": "pwg",
+				"__text": "docname"
+			},
+			"DocumentUri": {
+				"__prefix": "pwg",
+				"__text": "http://www.altova.com"
+			},
+			"Impressions": {
+				"__prefix": "pwg",
+				"__text": "0"
+			},
+			"JobCollationType": {
+				"__prefix": "pwg",
+				"__text": "Unknown"
+			},
+			"MediaSheets": {
+				"__prefix": "pwg",
+				"__text": "0"
+			},
+			"PageOrderReceived": {
+				"__prefix": "pwg",
+				"__text": "NTo1Order"
+			},
+			"__prefix": "pwg"
+		},
+		"Print3DJobProcessing": {
+			"JobDelayOutputUntil": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "Indefinite"
+			},
+			"JobErrorAction": {
+				"__prefix": "pwg",
+				"__text": "CancelJob"
+			},
+			"JobHoldUntil": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "DayTime"
+			},
+			"JobMandatoryElements": {
+				"JobMandatoryElement": [{
+						"__prefix": "pwg",
+						"__text": "NMTOKEN"
+					}, {
+						"__prefix": "pwg",
+						"__text": "NMTOKEN"
+					}
+				],
+				"__prefix": "pwg"
+			},
+			"JobPhoneNumber": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "http://www.altova.com"
+			},
+			"JobPriority": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "1"
+			},
+			"JobRecipientName": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "recipientname"
+			},
+			"JobCopies": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "0"
+			},
+			"JobSaveDisposition": {
+				"SaveDisposition": {
+					"__prefix": "pwg",
+					"__text": "PrintSave"
+				},
+				"SaveInfo": [{
+						"SaveDocumentFormat": {
+							"_pwg:MustHonor": "true",
+							"__prefix": "pwg",
+							"__text": "image/tiff"
+						},
+						"SaveLocation": {
+							"__prefix": "pwg",
+							"__text": "http://www.altova.com"
+						},
+						"SaveName": {
+							"__prefix": "pwg",
+							"__text": "String"
+						},
+						"__prefix": "pwg"
+					}, {
+						"SaveDocumentFormat": {
+							"_pwg:MustHonor": "true",
+							"__prefix": "pwg",
+							"__text": "image/tiff"
+						},
+						"SaveLocation": {
+							"__prefix": "pwg",
+							"__text": "http://www.altova.com"
+						},
+						"SaveName": {
+							"__prefix": "pwg",
+							"__text": "String"
+						},
+						"__prefix": "pwg"
+					}
+				],
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg"
+			},
+			"OutputDevice": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "device1"
+			},
+			"MultipleObjectHandling": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "best-quality"
+			},
+			"PrinterBedTemperature": {
+				"_pwg:MustHonor": "true",
+				"__prefix": "pwg",
+				"__text": "-273"
+			},
+			"_pwg:MustHonor": "true",
+			"__prefix": "pwg"
+		},
+		"_xmlns:dcterms": "http://purl.org/dc/terms/",
+		"_xmlns:pwg": "http://www.pwg.org/schemas/2016/12/sm",
+		"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"_pwg:MustHonor": "true",
+		"_xsi:schemaLocation": "http://www.pwg.org/schemas/2016/12/sm PrintJobTicket.xsd",
+		"__prefix": "pwg"
+	}
+}

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.pwg.org/schemas/2016/12/sm" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pwg="http://www.pwg.org/schemas/2016/12/sm" targetNamespace="http://www.pwg.org/schemas/2016/12/sm" elementFormDefault="qualified" attributeFormDefault="qualified" version="2.909">
+	<xs:include schemaLocation="ServiceTypes.xsd"/>
+	<xs:include schemaLocation="Print3DServiceDefaults.xsd"/>
+	<!--12/07/116 PJZ Split out from PrintServiceCapabilities.xsd-->
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+   PWG Semantic Model v2   
+
+Copyright 2002-20011, IEEE Industry Standards and Technology Organization/PWG - MFD Working Group. 
+All rights reserved  
+
+   Editors:  Peter Zehler, Ira McDonald 
+</xs:documentation>
+	</xs:annotation>
+	<!---->
+	<!-- Printer Capabilities - group for use in a cloud based print service protocol exchange-->
+	<xs:element name="Print3DServiceJobCapabilities">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Print3DJobCreationElements" minOccurs="0"/>
+				<xs:element ref="Print3DDocumentTicketCapabilities" minOccurs="0"/>
+				<xs:element ref="Print3DJobTicketCapabilities"/>
+				<xs:element ref="DefaultPrint3DJobTicket" minOccurs="0"/>
+				<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Print3DJobCreationElements">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CharsetConfigured"/>
+				<xs:element ref="ColorSupported" minOccurs="0"/>
+				<xs:element ref="DocumentFormatDetailsSupported" minOccurs="0"/>
+				<xs:element ref="DocumentFormatSupported"/>
+				<xs:element ref="DocumentPasswordSupported" minOccurs="0"/>
+				<xs:element ref="JobPasswordEncryptionSupported" minOccurs="0"/>
+				<xs:element ref="JobPasswordSupported" minOccurs="0"/>
+				<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!---->
+	<!---->
+	<!---->
+	<!-- Print3DService Capabilities - group -->
+	<!---->
+	<xs:complexType name="Print3DServiceCapabilitiesType">
+		<xs:sequence>
+			<xs:element ref="Print3DDocumentTicketCapabilities" minOccurs="0"/>
+			<xs:element ref="Print3DJobTicketCapabilities" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Print3DDocumentTicketCapabilitiesType">
+		<xs:sequence>
+			<xs:element ref="Print3DDocumentDescriptionCapabilities" minOccurs="0"/>
+			<xs:element ref="Print3DDocumentProcessingCapabilities" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute ref="MustHonor"/>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+	<xs:element name="Print3DDocumentTicketCapabilities" type="Print3DDocumentTicketCapabilitiesType"/>
+	<xs:complexType name="Print3DDocumentDescriptionCapabilitiesType">
+		<xs:sequence>
+			<xs:element name="CompressionSupplied" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="CompressionType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DocumentCharsetSupplied" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="CharsetType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DocumentDigitalSignature" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="DocumentDigitalSignatureType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DocumentDigitalSignatureSupplied" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="DocumentDigitalSignatureType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DocumentFormatDetailsSupplied" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="DocumentFormatDetailsType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DocumentFormatSupplied" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="DocumentFormatType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DocumentFormatVersionSupplied" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="DocumentMessage" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="DocumentName" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="DocumentNaturalLanguage" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="NaturalLanguageType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DocumentMessageSupplied" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="DocumentMetadata" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="DocumentNameSupplied" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="DocumentUri" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="KOctets" type="xs:boolean" minOccurs="0"/>
+			<xs:element ref="LastDocument" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintDocumentDescription - group -->
+	</xs:complexType>
+	<xs:element name="Print3DDocumentDescriptionCapabilities" type="Print3DDocumentDescriptionCapabilitiesType"/>
+	<xs:complexType name="Print3DDocumentProcessingCapabilitiesType">
+		<xs:sequence>
+			<xs:element name="Copies" type="RangeOfIntType" minOccurs="0"/>
+			<xs:element name="DocumentPassword" type="xs:int" minOccurs="0"/>
+			<xs:element ref="MaterialAmountUnitsSupported" minOccurs="0"/>
+			<xs:element ref="MaterialDiameterSupported" minOccurs="0"/>
+			<xs:element ref="MaterialPurposeSupported" minOccurs="0"/>
+			<xs:element ref="MaterialRateSupported" minOccurs="0"/>
+			<xs:element ref="MaterialRateUnitsSupported" minOccurs="0"/>
+			<xs:element ref="MaterialsColDatabase" minOccurs="0"/>
+			<xs:element ref="MaterialsColSupported" minOccurs="0"/>
+			<xs:element ref="MaterialShellThicknessSupported" minOccurs="0"/>
+			<xs:element ref="MaterialTemperatureSupported" minOccurs="0"/>
+			<xs:element ref="MaterialTypeSupported" minOccurs="0"/>
+			<xs:element name="OutputDevice" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="xs:string" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Quality" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" maxOccurs="unbounded">
+							<xs:simpleType>
+								<xs:union memberTypes="PrintQualityWKV KeywordNsExtensionPattern"/>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Print3DDocumentProcessingCapabilities" type="Print3DDocumentProcessingCapabilitiesType"/>
+	<xs:complexType name="Print3DJobDescriptionCapabilitiesType">
+		<xs:sequence>
+			<xs:element name="CompressionSupplied" type="CompressionSupportedType" minOccurs="0"/>
+			<xs:element name="DocumentCharsetSupplied" type="DocumentCharsetSupportedType" minOccurs="0"/>
+			<xs:element name="DocumentDigitalSignatureSupplied" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="DocumentFormatDetailsSupplied" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="DocumentSourceApplicationName" type="xs:boolean" minOccurs="0"/>
+						<xs:element name="DocumentSourceApplicationVersion" type="xs:boolean" minOccurs="0"/>
+						<xs:element name="DocumentSourceOsName" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="AllowedValues" maxOccurs="unbounded">
+										<xs:simpleType>
+											<xs:union memberTypes="OperatingSystemNameWKV OperatingSystemNameExtensionPattern"/>
+										</xs:simpleType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="DocumentSourceOsVersion" type="xs:boolean" minOccurs="0"/>
+						<xs:element name="DocumentFormat" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="AllowedValues" type="DocumentFormatType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="DocumentFormatDeviceId" type="xs:boolean" minOccurs="0"/>
+						<xs:element name="DocumentFormatVersion" type="xs:boolean" minOccurs="0"/>
+						<xs:element name="DocumentNaturalLanguage" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="AllowedValues" type="NaturalLanguageType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DocumentFormatSupplied" type="DocumentFormatSupportedType" minOccurs="0"/>
+			<xs:element name="DocumentFormatVersionSupplied" type="DocumentFormatVersionSupportedType" minOccurs="0"/>
+			<xs:element name="DocumentMessageSupplied" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="DocumentNameSupplied" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="ElementsNaturalLanguage" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="NaturalLanguageType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="JobAccountingID" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="JobAccountingUserID" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="JobCollationType" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" maxOccurs="unbounded">
+							<xs:simpleType>
+								<xs:union memberTypes="JobCollationTypeWKV KeywordNsExtensionPattern"/>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="JobMandatoryElements" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Alternative encoding of MustHonor attribute</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="JobMessageFromOperator" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="JobMessageToOperator" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="JobMoreInfo" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="JobName" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="JobOriginatingUserName" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="JobOriginatingUserUri" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="JobPassword" type="xs:int" minOccurs="0"/>
+			<xs:element name="JobPasswordEncryption" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AllowedValue" type="JobPasswordEncryptionType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="KOctets" type="xs:boolean" minOccurs="0"/>
+			<xs:sequence>
+				<xs:element name="TemplateCreatorUserName" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="TemplateId" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="TemplateInfo" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="TemplateName" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="TemplateType" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AllowedValue" type="TemplateTypeType" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Print3DJobDescriptionCapabilities" type="Print3DJobDescriptionCapabilitiesType"/>
+	<xs:complexType name="Print3DJobProcessingCapabilitiesType">
+		<xs:complexContent>
+			<xs:extension base="ImagingJobProcessingCapabilitiesType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Print3DJobProcessingCapabilities">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Print3DJobProcessingCapabilitiesType">
+					<xs:sequence>
+						<!-- Print job processing references here -->
+						<xs:element name="JobCopies" type="RangeOfIntType" minOccurs="0"/>
+						<xs:element name="JobSaveDisposition" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="SaveDisposition" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="AllowedValues" type="SaveDispositionType" maxOccurs="unbounded"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="SaveInfo" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="SaveDocumentFormat" minOccurs="0">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="AllowedValues" type="SaveDocumentFormatType" maxOccurs="unbounded"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="SaveLocation" minOccurs="0">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element ref="UriSchemSupported" maxOccurs="unbounded"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="SaveName" type="xs:boolean" minOccurs="0"/>
+												<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="MultipleObjectHandling" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="AllowedValues" type="MultipleObjectHandlingType" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="OutputDevice" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="AllowedValues" type="OutputDeviceType" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Overrides" type="xs:boolean" minOccurs="0"/>
+						<xs:element name="PrinterBedTemperature" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="PrinterBedTemperature" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Print3DJobTicketCapabilitiesType">
+		<xs:sequence>
+			<xs:element ref="Print3DDocumentProcessingCapabilities" minOccurs="0"/>
+			<xs:element ref="Print3DJobDescriptionCapabilities" minOccurs="0"/>
+			<xs:element ref="Print3DJobProcessingCapabilities" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Print3DJobTicketCapabilities" type="Print3DJobTicketCapabilitiesType"/>
+	<xs:element name="Print3DServiceCapabilitiesReady" type="Print3DServiceCapabilitiesType"/>
+	<xs:element name="Print3DServiceCapabilities" type="Print3DServiceCapabilitiesType"/>
+</xs:schema>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.pwg.org/schemas/2016/12/sm" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pwg="http://www.pwg.org/schemas/2016/12/sm" targetNamespace="http://www.pwg.org/schemas/2016/12/sm" elementFormDefault="qualified" attributeFormDefault="qualified" version="2.909">
+	<xs:include schemaLocation="PwgWellKnownValues.xsd"/>
+	<xs:include schemaLocation="PwgCommon.xsd"/>
+	<xs:include schemaLocation="JobTypes.xsd"/>
+	<!--12/07/16 PJZ Created, Split out from PrintJobTicket-->
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+   PWG Semantic Model v3   
+
+Copyright 2002-2014, IEEE Industry Standards and Technology Organization/PWG - SM Working Group. 
+All rights reserved  
+
+   Editors:  Peter Zehler, Ira McDonald, Daniel Manchala 
+</xs:documentation>
+	</xs:annotation>
+	<!---->
+	<!---->
+	<!-- Print3DDocumentDescription -->
+	<xs:complexType name="Print3DDocumentDescriptionType">
+		<xs:sequence>
+			<!-- Print Document description references here -->
+			<xs:element ref="DocumentDigitalSignature" minOccurs="0"/>
+			<xs:element ref="DocumentMetadata" minOccurs="0"/>
+			<xs:element ref="DocumentName" minOccurs="0"/>
+			<xs:element ref="DocumentUri" minOccurs="0"/>
+			<xs:element ref="KOctets" minOccurs="0"/>
+			<xs:element ref="LastDocument" minOccurs="0"/>
+			<xs:element ref="MaterialsCol"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintDocumentDescription - group -->
+	</xs:complexType>
+	<xs:element name="Print3DDocumentDescription" type="Print3DDocumentDescriptionType"/>
+	<!-- Print3DDocumentProcessing -->
+	<xs:complexType name="Print3DDocumentProcessingType">
+		<xs:sequence>
+			<!-- Print document processing references here -->
+			<xs:element ref="Copies" minOccurs="0"/>
+			<xs:element ref="OutputDevice" minOccurs="0"/>
+			<xs:element ref="PrintAccuracy"/>
+			<xs:element ref="PrintObjects"/>
+			<xs:element ref="PrintRafts"/>
+			<xs:element ref="PrintSupports"/>
+			<xs:element ref="PrintObject"/>
+			<xs:element ref="Quality" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintDocumentProcessing - group -->
+	</xs:complexType>
+	<xs:element name="Print3DDocumentProcessing" type="Print3DDocumentProcessingType"/>
+	<!--Print 3D Document Ticket Job -->
+	<xs:complexType name="Print3DDocumentTicketType">
+		<xs:sequence>
+			<xs:element ref="Print3DDocumentDescription" minOccurs="0"/>
+			<xs:element ref="Print3DDocumentProcessing" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute ref="MustHonor"/>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+	<xs:element name="Print3DDocumentTicket" type="Print3DDocumentTicketType"/>
+	<xs:element name="Print3DDocumentReceipt" type="Print3DDocumentTicketType"/>
+	<!---->
+	<!-- Print3DJobDescription -->
+	<xs:complexType name="Print3DJobDescriptionType">
+		<xs:sequence>
+			<!-- Print job description references here -->
+			<xs:element ref="CompressionSupplied" minOccurs="0"/>
+			<xs:element ref="DocumentDigitalSignatureSupplied" minOccurs="0"/>
+			<xs:element ref="DocumentFormatDetailsSupplied" minOccurs="0"/>
+			<xs:element ref="DocumentFormatSupplied" minOccurs="0"/>
+			<xs:element ref="DocumentFormatVersionSupplied" minOccurs="0"/>
+			<xs:element ref="DocumentMessageSupplied" minOccurs="0"/>
+			<xs:element ref="DocumentMetadata" minOccurs="0"/>
+			<xs:element ref="DocumentNameSupplied" minOccurs="0"/>
+			<xs:element ref="DocumentUri" minOccurs="0"/>
+			<xs:element ref="ElementsNaturalLanguage" minOccurs="0"/>
+			<xs:element ref="JobAccountingID" minOccurs="0"/>
+			<xs:element ref="JobAccountingUserID" minOccurs="0"/>
+			<xs:element ref="JobMessageFromOperator" minOccurs="0"/>
+			<xs:element ref="JobMessageToOperator" minOccurs="0"/>
+			<xs:element ref="JobMoreInfo" minOccurs="0"/>
+			<xs:element ref="JobName"/>
+			<xs:element ref="JobOriginatingUserName" minOccurs="0"/>
+			<xs:element ref="JobOriginatingUserUri" minOccurs="0"/>
+			<xs:element ref="KOctets" minOccurs="0"/>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="TemplateCreatorUserName" minOccurs="0"/>
+				<xs:element ref="TemplateId" minOccurs="0"/>
+				<xs:element ref="TemplateInfo" minOccurs="0"/>
+				<xs:element ref="TemplateName" minOccurs="0"/>
+				<xs:element ref="TemplateType" minOccurs="0"/>
+			</xs:sequence>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- PrintJobDescription - group -->
+	</xs:complexType>
+	<xs:element name="Print3DJobDescription" type="Print3DJobDescriptionType"/>
+	<!-- Print3DJobProcessing -->
+	<xs:complexType name="Print3DJobProcessingType">
+		<xs:complexContent>
+			<xs:extension base="ImagingJobProcessingType">
+				<xs:sequence>
+					<!-- Print job processing references here -->
+					<xs:element ref="JobCopies" minOccurs="0"/>
+					<xs:element ref="JobSaveDisposition" minOccurs="0"/>
+					<xs:element ref="OutputDevice" minOccurs="0"/>
+					<xs:element ref="MultipleObjectHandling"/>
+					<xs:element ref="PrinterBedTemperature"/>
+					<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+		<!-- PrintJobProcessing - group -->
+	</xs:complexType>
+	<xs:element name="Print3DJobProcessing" type="Print3DJobProcessingType"/>
+	<!--Print 3D Job Ticket Job -->
+	<xs:complexType name="Print3DJobTicketType">
+		<xs:sequence>
+			<xs:element ref="Print3DDocumentProcessing" minOccurs="0"/>
+			<xs:element ref="Print3DJobDescription" minOccurs="0"/>
+			<xs:element ref="Print3DJobProcessing" minOccurs="0"/>
+			<xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute ref="MustHonor"/>
+		<xs:anyAttribute namespace="##other"/>
+	</xs:complexType>
+	<xs:element name="Print3DJobReceipt" type="Print3DJobTicketType"/>
+	<xs:element name="Print3DJobTicket" type="Print3DJobTicketType"/>
+</xs:schema>

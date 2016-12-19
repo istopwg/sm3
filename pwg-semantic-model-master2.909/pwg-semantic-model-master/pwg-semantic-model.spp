@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;rdf;smil;svg;wml">
+		<File FilePath="Print3DJobTicket.xml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XSL Files" ExtStr="xsl;xslt"/>
+	<Folder FolderName="XQuery Files" ExtStr="xq;xql;xquery"/>
+	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp"/>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
+		<File FilePath="addressing.xsd" HomeFolder="Yes"/>
+		<File FilePath="Conditions.xsd" HomeFolder="Yes"/>
+		<File FilePath="CopyService.xsd" HomeFolder="Yes"/>
+		<File FilePath="Counter.xsd" HomeFolder="Yes"/>
+		<File FilePath="dc.xsd" HomeFolder="Yes"/>
+		<File FilePath="dcmitype.xsd" HomeFolder="Yes"/>
+		<File FilePath="dcterms.xsd" HomeFolder="Yes"/>
+		<File FilePath="DocumentTypes.xsd" HomeFolder="Yes"/>
+		<File FilePath="EmailInService.xsd" HomeFolder="Yes"/>
+		<File FilePath="EmailOutService.xsd" HomeFolder="Yes"/>
+		<File FilePath="FaxInService.xsd" HomeFolder="Yes"/>
+		<File FilePath="FaxOutService.xsd" HomeFolder="Yes"/>
+		<File FilePath="http.xsd" HomeFolder="Yes"/>
+		<File FilePath="include.xsd" HomeFolder="Yes"/>
+		<File FilePath="JobTypes.xsd" HomeFolder="Yes"/>
+		<File FilePath="MediaElements.xsd" HomeFolder="Yes"/>
+		<File FilePath="MediaWellKnownValues.xsd" HomeFolder="Yes"/>
+		<File FilePath="oasis-200401-wss-wssecurity-secext-1.0.xsd" HomeFolder="Yes"/>
+		<File FilePath="oasis-200401-wss-wssecurity-utility-1.0.xsd" HomeFolder="Yes"/>
+		<File FilePath="Power.xsd" HomeFolder="Yes"/>
+		<File FilePath="Print3DJobTicket.xsd" HomeFolder="Yes"/>
+		<File FilePath="Print3DService.xsd" HomeFolder="Yes"/>
+		<File FilePath="Print3DServiceCapabilities.xsd" HomeFolder="Yes"/>
+		<File FilePath="Print3DServiceDefaults.xsd" HomeFolder="Yes"/>
+		<File FilePath="PrintJobTicket.xsd" HomeFolder="Yes"/>
+		<File FilePath="PrintService.xsd" HomeFolder="Yes"/>
+		<File FilePath="PrintServiceCapabilities.xsd" HomeFolder="Yes"/>
+		<File FilePath="PrintServiceDefaults.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgCommon.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgCommonOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgCopyOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgDeprecated.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgFaxInOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgFaxOutOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgNotificationOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgPrintOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgResourceOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgScanOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgSecurityOpMsg.904.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgSecurityOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgSemanticModel.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgSystemControlOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgTransformOpMsg.xsd" HomeFolder="Yes"/>
+		<File FilePath="PwgWellKnownValues.xsd" HomeFolder="Yes"/>
+		<File FilePath="qualifieddc.xsd" HomeFolder="Yes"/>
+		<File FilePath="ResourceService.xsd" HomeFolder="Yes"/>
+		<File FilePath="saml-schema-assertion-2.0.xsd" HomeFolder="Yes"/>
+		<File FilePath="ScanService.xsd" HomeFolder="Yes"/>
+		<File FilePath="Security.903.xsd" HomeFolder="Yes"/>
+		<File FilePath="Security.904.xsd" HomeFolder="Yes"/>
+		<File FilePath="Security.xsd" HomeFolder="Yes"/>
+		<File FilePath="Services.xsd" HomeFolder="Yes"/>
+		<File FilePath="ServicesOperations.xsd" HomeFolder="Yes"/>
+		<File FilePath="ServiceTypes.xsd" HomeFolder="Yes"/>
+		<File FilePath="Subunits.xsd" HomeFolder="Yes"/>
+		<File FilePath="System.xsd" HomeFolder="Yes"/>
+		<File FilePath="SystemControlService.xsd" HomeFolder="Yes"/>
+		<File FilePath="SystemHealth.xsd" HomeFolder="Yes"/>
+		<File FilePath="TransformService.xsd" HomeFolder="Yes"/>
+		<File FilePath="wsdl.xsd" HomeFolder="Yes"/>
+		<File FilePath="xenc-schema.xsd" HomeFolder="Yes"/>
+		<File FilePath="xml.xsd" HomeFolder="Yes"/>
+		<File FilePath="xmldsig-core-schema.xsd" HomeFolder="Yes"/>
+		<File FilePath="xmlmime.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="Entities" ExtStr="ent"/>
+	<File FilePath="PwgCopy.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgFaxIn.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgFaxOut.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgNotification.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgPrint.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgResource.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgScan.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgSecurity.904.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgSecurity.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgSystemControl.wsdl" HomeFolder="Yes"/>
+	<File FilePath="PwgTransform.wsdl" HomeFolder="Yes"/>
+</Project>
